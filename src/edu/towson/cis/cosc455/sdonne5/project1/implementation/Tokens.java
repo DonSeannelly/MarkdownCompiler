@@ -5,7 +5,7 @@ public class Tokens {
 	public static final String DOCB = "#BEGIN";
 	public static final String DOCE = "#END";
 	public static final String HEAD = "^";
-	public static final String TILEB = "<";
+	public static final String TITLEB = "<";
 	public static final String TITLEE = ">";
 	public static final String PARAB = "{";
 	public static final String PARAE = "}";
@@ -25,5 +25,26 @@ public class Tokens {
 	public static final String ADDRESSB = "(";
 	public static final String ADDRESSE = ")";
 	//public static final String TEXT = ;
-	
+	//create array to store all tokens
+	private static String[] tokens = { 
+			DOCB, DOCE, HEAD, TITLEB,
+			TITLEE, PARAB, PARAE, DEFB,
+			DEFUSEE, EQSIGN, USEB, BOLD,
+			ITALICS, LISTITEMB, LISTITEME,
+			NEWLINE, LINKB, LINKE, AUDIO,
+			VIDEO, ADDRESSB, ADDRESSE
+		};
+	/**
+	 * Checks if the provided token exists in the language
+	 * 
+	 * @return true if token exists in the token array, else return false
+	 */
+	public static boolean isToken(String toCheck){
+		for(int i=0;i<tokens.length;i++){
+			if(toCheck.equalsIgnoreCase(tokens[i])){
+				return true;
+			}
+		}
+		return false;
+	}
 }
