@@ -1,5 +1,7 @@
 package edu.towson.cis.cosc455.sdonne5.project1.interfaces;
 
+import edu.towson.cis.cosc455.sdonne5.project1.implementation.LexicalException;
+
 /**
  * COSC 455 Programming Languages: Implementation and Design.
  *
@@ -22,8 +24,10 @@ package edu.towson.cis.cosc455.sdonne5.project1.interfaces;
 	/**
 	 * This is the public method to be called when the Syntax Analyzer needs a new
 	 * token to be parsed.
+	 * @return the token as a String
+	 * @throws LexicalException 
 	 */
-	public void getNextToken();
+	public String getNextToken() throws LexicalException;
 
 	/**
 	 * This is method gets the next character from the input and places it in
@@ -31,21 +35,23 @@ package edu.towson.cis.cosc455.sdonne5.project1.interfaces;
 	 *
 	 * @return the character
 	 */
-	void getCharacter();
+	char getCharacter();
 
 	 /**
      * This method adds the current character the nextToken.
+     * 
+     * @param c the character to add
      */
-	void addCharacter();
+	void addCharacter(char c);
 
 	/**
 	 * This is method gets the next character from the input and places it in
 	 * the nextCharacter class variable.
 	 *
 	 * @param c the current character
-	 * @return true, if is space; otherwise false
+	 * @return true if the passed character is a space; otherwise false
 	 */
-	boolean isSpace(String c);
+	boolean isSpace(char c);
 
 	/**
 	 * This method checks to see if the current, possible token is legal in the

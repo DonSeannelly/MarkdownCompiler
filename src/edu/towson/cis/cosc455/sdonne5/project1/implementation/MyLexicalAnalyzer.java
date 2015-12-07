@@ -15,9 +15,9 @@ import edu.towson.cis.cosc455.sdonne5.project1.interfaces.LexicalAnalyzer;
  */
 public class MyLexicalAnalyzer implements LexicalAnalyzer {
 
-    private String currentToken = "";
+    public String currentToken = "";
     
-    private int currentPosition = 0;
+    public int currentPosition = 0;
     
     public char[] fileCharArray;
     
@@ -43,6 +43,7 @@ public class MyLexicalAnalyzer implements LexicalAnalyzer {
 		
 		while(noTokenFound){
 			char character = getCharacter();
+			//If the character = the start of a token
 			if(character == '#' | character == '^' | character == '<' | character == '>' |
 					 character == '{' | character == '}' | character == '$'
 					 | character == '=' | character == '*' | character == '+'
@@ -50,7 +51,7 @@ public class MyLexicalAnalyzer implements LexicalAnalyzer {
 					 | character == ']' | character == '@' | character == '%'
 					 | character == '(' | character == ')'){
 				
-				//flip the flag to exit loop
+				//flip the flag to exit loop, there was a token found
 				noTokenFound=false;
 				
 				if(character == '#' | character == '$'){
@@ -119,7 +120,7 @@ public class MyLexicalAnalyzer implements LexicalAnalyzer {
 	 * @return true, if is space; otherwise false
 	 */
 	public boolean isSpace(char c) {
-		if(c == ' '){
+		if(c == ' ' | c == '\r'){
 			return true;
 		}
 		return false;

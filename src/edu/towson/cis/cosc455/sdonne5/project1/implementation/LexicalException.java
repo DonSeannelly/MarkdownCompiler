@@ -8,7 +8,7 @@ public class LexicalException extends Exception {
 	private static final long serialVersionUID = 1L;//What is this?
 
 	public LexicalException(){
-		super("There are no tokens in the file.");
+		super("There are no valid tokens remaining in the file.");
 	}
 	public LexicalException(String token){
 		super(token + " is not a valid token.");

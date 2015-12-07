@@ -17,7 +17,7 @@ public class Tokens {
 	public static final String ITALICS = "*";
 	public static final String LISTITEMB = "+";
 	public static final String LISTITEME = ";";
-	public static final String NEWLINE = "~";
+	public static final String NEWLINE = "\n";
 	public static final String LINKB = "[";
 	public static final String LINKE = "]";
 	public static final String AUDIO = "@";
@@ -47,4 +47,5 @@ public class Tokens {
 		}
 		return false;
 	}
+	
 }
