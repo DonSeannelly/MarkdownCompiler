@@ -1,0 +1,11 @@
+#BEGIN 
+   ^ < The Simpsons > ^ 
+   { 
+      The members of the The Simpsons are: 
+         + Homer Simpson ; 
+         + Marge Simpson ; 
+         + Bart Simpson ; 
+         + Lisa Simpson ; 
+         + Maggie Simpson ; 
+   } 
+#END 

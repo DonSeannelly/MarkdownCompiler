@@ -1,0 +1,12 @@
+#BEGIN 
+   $DEF lastname = Simpson $END
+   $DEF firstname = Bart $END
+   {
+      The members of the $USE lastname $END family are: 
+         + Homer $USE lastname $END ; 
+         + Marge $USE lastname $END ; 
+         + $USE firstname $END $USE lastname $END ; 
+         + Lisa $USE lastname $END ; 
+         + Maggie $USE lastname $END ; 
+   } 
+#END 

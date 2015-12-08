@@ -1,0 +1,9 @@
+#BEGIN 
+   $DEF myname = Josh $END 
+      Hi, my name is $USE myname $END . 
+      { 
+         $DEF myname = Jon $END 
+            Inside the paragraph block, my name is $USE myname $END 
+      }
+   Now my name is $USE myname $END again. 
+#END 

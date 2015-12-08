@@ -1,0 +1,19 @@
+#BEGIN 
+   $DEF lastname = Simpson $END
+   ^ < The Simpsons > ^ 
+   { 
+      ** The Simpsons **
+      @(http://www.televisiontunes.com/uploads/audio/The Simpsons.mp3) 
+      ~ 
+      The members of the [The Simpsons](https://en.wikipedia.org/wiki/The_Simpsons) are: 
+         + Homer $USE lastname $END ; 
+         + Marge $USE lastname $END ; 
+         + Bart $USE lastname $END ; 
+         + Lisa $USE lastname $END ; 
+         + Maggie $USE lastname $END ; 
+      ~
+      Lets * watch * now: 
+	  ~ 
+      %(http://www.youtube.com/embed/zoO0s1ukcqQ) 
+   } 
+#END 	
